@@ -1,0 +1,25 @@
+const fs = require('fs');
+
+const copyright = 'Copyright (C) 2016-2026 Timofei Kachalov <support@obfuscator.io>';
+
+class WebpackUtils {
+    /**
+     * @param entries
+     * @returns {string[]}
+     */
+    static getBannerText (...entries) {
+        const lineSeparator = '\n\n';
+
+        return entries.reduce((bannerText, entry) => {
+            return `${bannerText}${entry}${lineSeparator}`
+        }, '');
+    }
+
+    static getLicenseText () {
+        return `/*!\n${copyright}\n\n` +
+            fs.readFileSync('./LICENSE.BSD', 'utf8') + "\n*/";
+    }
+
+}
+
+module.exports.WebpackUtils = WebpackUtils;
