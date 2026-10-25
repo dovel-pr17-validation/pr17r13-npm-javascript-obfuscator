@@ -48,7 +48,7 @@
   "devDependencies": {
     "@istanbuljs/nyc-config-typescript": "1.0.2",
     "@types/chai": "4.3.20",
-    "@types/chance": "1.1.7",
+    "@types/chance": "1.1.8",
     "@types/escodegen": "0.0.10",
     "@types/eslint-scope": "3.7.7",
     "@types/eslint-visitor-keys": "1.0.0",
